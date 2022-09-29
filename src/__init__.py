@@ -1,5 +1,5 @@
 from flask import Flask
-from .view import base as baseBlueprint
+from .views import base as baseBlueprint
 from .config import config
 
 
