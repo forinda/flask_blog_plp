@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/dist/index.css') }}">
+{% extends 'include/base.html' %} {% block content %}
+<div class="px-2">
+  <h2>Homepage</h2>
+</div>
 
-</head>
-<body>
-    <h1 class="uppercase text-red-600">Hello world</h1>
-</body>
-</html>
+{% endblock content %} {% block script %}
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.title = "O-Blog homepage";
+  });
+</script>
+{% endblock script %}

@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    {% block content %}
-        
-    {% endblock content %}
-</body>
+    <link rel=stylesheet type=text/css href="{{ url_for('static',
+    filename='css/dist/index.css') }}">
+  </head>
+
+  <body>
+    <nav class="h-20 flex items-center bg-blue-700 text-white shadow-lg">
+      <div
+        class="max-w-7xl mx-auto px-4 flex items-center justify-between w-full"
+      >
+        <div>
+          <h2 class="font-bold uppercase text-xl">O-Blog</h2>
+        </div>
+
+        <div>
+          <ul class="flex items-center gap-3">
+            <li>Login</li>
+            <li>Register</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="min-h-screen">{% block content %} {% endblock content %}</div>
+
+    {% include 'include/footer.html' %} {% block script %} {% endblock script %}
+  </body>
 </html>
