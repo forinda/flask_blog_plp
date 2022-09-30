@@ -5,4 +5,9 @@ base = Blueprint('base',__name__)
 
 @base.route("/")
 def index():
-	return render_template('index.html')
+	context = [
+		{
+
+		}
+	]
+	return render_template('index.html',context=context)
