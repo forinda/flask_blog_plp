@@ -29,5 +29,11 @@
     <div class="min-h-screen">{% block content %} {% endblock content %}</div>
 
     {% include 'include/footer.html' %} {% block script %} {% endblock script %}
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const year = new Date().getFullYear();
+            document.getElementsByClassName("footer-title")[0].innerHTML = `© ${year} O-Blog`;
+        });
+    </script>
   </body>
 </html>
