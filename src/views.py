@@ -5,4 +5,9 @@ base = Blueprint('base',__name__)
 
 @base.route("/")
 def index():
+	services = [
+		{
+			"name":""
+		}
+	]
 	return render_template('index.html')
