@@ -1,13 +1,15 @@
-from flask import Flask
+""" Flask application """
+from flask import Flask # pylint: disable=import-error
+from flask_fontawesome import FontAwesome # pylint: disable=import-error
 from .views import base as baseBlueprint
 from .config import config
-from flask_fontawesome import FontAwesome
 
 
 def create_app():
+    """Create the application."""
     app = Flask(__name__)
     FontAwesome(app)
-    app.config.from_object(config['dev'])
+    app.config.from_object(config['dev'])  # type: ignore
 
     app.register_blueprint(baseBlueprint)
 
