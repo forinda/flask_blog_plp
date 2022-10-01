@@ -9,7 +9,7 @@ def create_app():
     """Create the application."""
     app = Flask(__name__)
     FontAwesome(app)
-    app.config.from_object(config['dev'])
+    app.config.from_object(config['dev'])  # type: ignore
 
     app.register_blueprint(baseBlueprint)
 
