@@ -1,10 +1,12 @@
+""" Flask application """
 from flask import Flask
+from flask_fontawesome import FontAwesome
 from .views import base as baseBlueprint
 from .config import config
-from flask_fontawesome import FontAwesome
 
 
 def create_app():
+    """Create the application."""
     app = Flask(__name__)
     FontAwesome(app)
     app.config.from_object(config['dev'])

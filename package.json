@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "lint":"pylint ./**/*.py",
+    "format:pep8": "autopep8 --in-place --aggressive --aggressive ./**/*.py",
+    "lint:format": "npm run lint && npm run format:pep8",
     "dev:server": "export FLASK_APP=wsgi.py && export FLASK_DEBUG=1 && flask run --port 8000",
     "dev:tailwind": "npx tailwindcss -i ./src/static/css/input/index.css -o ./src/static/css/dist/index.css -w",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:tailwind\"",
