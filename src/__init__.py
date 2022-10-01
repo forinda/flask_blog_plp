@@ -1,6 +1,6 @@
 """ Flask application """
-from flask import Flask
-from flask_fontawesome import FontAwesome
+from flask import Flask # pylint: disable=import-error
+from flask_fontawesome import FontAwesome # pylint: disable=import-error
 from .views import base as baseBlueprint
 from .config import config
 
