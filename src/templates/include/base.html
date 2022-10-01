@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel=stylesheet type=text/css href="{{ url_for('static',
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- Tailwindcss -->
+  <link rel=stylesheet type=text/css href="{{ url_for('static',
     filename='css/tailwindcss/index.css') }}">
-    {{ fontawesome_html() }}
-  </head>
+    <!-- Fontawesome solid -->
+  <link rel=stylesheet type=text/css href="{{ url_for('static',
+    filename='css/fa/solid.min.css') }}">
+    <!-- Fontawesome brand -->
+  <link rel=stylesheet type=text/css href="{{ url_for('static',
+    filename='css/fa/brands.min.css') }}">
+    <!-- Fontawesome regular -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static',
+    filename='css/fa/regular.min.css') }}">
+     <!-- Fontawesome all regular -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static',
+    filename='css/fa/all.min.css') }}">
+     {{ fontawesome_html() }}
+</head>
 
-  <body>
-    {% include 'include/nav.html' %}
-    <div class="min-h-screen">{% block content %} {% endblock content %}</div>
+<body>
+  {% include 'include/nav.html' %}
+  <div class="min-h-screen">{% block content %} {% endblock content %}</div>
 
-    {% include 'include/footer.html' %} {% block script %} {% endblock script %}
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const year = new Date().getFullYear();
-            document.getElementsByClassName("footer-title")[0].innerHTML = `© ${year} O-Blog`;
-        });
-    </script>
-  </body>
+  {% include 'include/footer.html' %} {% block script %} {% endblock script %}
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const year = new Date().getFullYear();
+      document.getElementsByClassName(
+        "footer-title"
+      )[0].innerHTML = `All rights reserved © ${year} Web Agency`;
+    });
+  </script>
+</body>
+
 </html>
