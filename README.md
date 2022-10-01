@@ -1,6 +1,6 @@
 # Flask Agency Website
-
-A simple implementation of an agency website to carry out campaign on the company reputation, services offered and the activities that carry along in the company profile. [Inspiration](https://www.templatemonster.com/joomla-templates/sombra-black-amp-color-multipurpose-joomla-template-247716.html)
+[inspiration_link]:https://www.templatemonster.com/joomla-templates/sombra-black-amp-color-multipurpose-joomla-template-247716.html
+A simple implementation of an agency website to carry out campaign on the company reputation, services offered and the activities that carry along in the company profile. [Inspiration]([inspiration_link])
 
 ---
 
